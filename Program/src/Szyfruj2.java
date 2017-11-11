@@ -3,7 +3,10 @@ import java.util.Scanner;
 
 
 
-/* Po uruchomieniu programu, wprowadź pełną scieżke do pliku tekstowego który chcesz zaszyfrować */
+/* 
+Program uruchamiany w konsoli / Terminalu
+Po uruchomieniu programu, wprowadź pełną scieżke do pliku tekstowego który chcesz zaszyfrować 
+*/
 
 
 public class Szyfruj2 {
