@@ -1,0 +1,6 @@
+This is very first version of my zipping and unzipping JFrame (Swing) program.
+Code is messy, needs to be edited and adjusted.
+
+Program use .zip format
+When unzipping .zip file, program is not creating new folder with these files (yet). 
+
