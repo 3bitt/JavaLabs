@@ -18,8 +18,7 @@ public class Szyfruj2 {
 			System.out.println("Podaj sciezke do pliku który chcesz zaszyfrować: ");
 			
 			path = sc.nextLine();			// wczytanie scieżki pliku do zaszyfrowania
-			
-						
+									
 			File encrypted = new File(path + " [Encrypted]");
 			
 			BufferedReader reader = new BufferedReader(new FileReader(path));
@@ -36,28 +35,20 @@ public class Szyfruj2 {
 			
 			System.out.println("\nZaszyfrowany!\nLokalizacja pliku: " + encrypted.getAbsolutePath());
 			
-			System.out.println("\n1. Odszyfruj plik\n2. Koniec\n");
-		
+			System.out.println("\n1. Odszyfruj plik\n2. Koniec\n");		
 			
-				int option = sc.nextInt();				// wczytanie wyboru	
-				
-				
-				while (option != 1 && option != 2) {
-					
+				int option = sc.nextInt();			// wczytanie wyboru	
+								
+				while (option != 1 && option != 2) {					
 					System.out.println("\nWybierz 1 lub 2\n");
 					
-					option = sc.nextInt();
-					
-					}
-				
-					sc.close();
-				
-					if (option == 1) {							// Odszyfrowanie
-						
-											
+					option = sc.nextInt();					
+					}				
+					sc.close();				
+					if (option == 1) {					// Odszyfrowanie
+																
 					File decrypted = new File(encrypted.getParentFile() + "/" + encrypted.getName().replace("[Encrypted]", "[Decrypted]"));
-					
-					
+									
 					BufferedReader decryptReader = new BufferedReader(new FileReader(encrypted.getAbsolutePath()));
 					BufferedWriter decryptWriter = new BufferedWriter(new PrintWriter(decrypted));
 					
@@ -70,15 +61,11 @@ public class Szyfruj2 {
 					decryptWriter.close();
 					
 					System.out.println("\nOdszyfrowany!\nLokalizacja pliku: " + decrypted.getAbsolutePath());	
-					
-					
+								
 					} else if (option == 2) {				// Exit
-						
 						System.out.println("Do następnego szyfrowania :)");
-						System.exit(-1);
-						
-					} else {
-						
+						System.exit(-1);						
+					} else {						
 						System.exit(-1);					
 						}			
 		} else {
